@@ -63,7 +63,7 @@
                 <div class="section-popular-travel row justify-content-center">
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/Group\ 7.jpg')">
+                            style="background-image: url('{{ url('frontend/images/Group\ 7.jpg') }}')">
                             <div class="travel-country">Indonesia</div>
                             <div class="travel-location">Deratan, Bali</div>
                             <div class="travel-button mt-auto">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/Group\ 8.jpg')">
+                            style="background-image: url('{{ url('frontend/images/Group\ 8.jpg') }}')">
                             <div class="travel-country">Indonesia</div>
                             <div class="travel-location">Bromo, Malang</div>
                             <div class="travel-button mt-auto">
@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/Group\ 9.jpg')">
+                            style="background-image: url('{{ url('frontend/images/Group\ 9.jpg') }}')">
                             <div class="travel-country">Indonesia</div>
                             <div class="travel-location">Nusa Penida</div>
                             <div class="travel-button mt-auto">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/Group\ 10.jpg')">
+                            style="background-image: url('{{ url('frontend/images/Group\ 10.jpg') }}')">
                             <div class="travel-country">Midle East</div>
                             <div class="travel-location">Dubai</div>
                             <div class="travel-button mt-auto">
@@ -117,7 +117,7 @@
                         </p>
                     </div>
                     <div class="col-md-8 text-center">
-                        <img src="frontend/images/logos_partner.png" alt="Logo Partners" class="img-partner" />
+                        <img src="{{ url('frontend/images/logos_partner.png') }}" alt="Logo Partners" class="img-partner" />
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
                             <div class="testimonial-content">
-                                <img src="frontend/images/testi-1.png" alt="testi 1" class="mb-4 mt-4 rounded-circle" />
+                                <img src="{{ url('frontend/images/testi-1.png') }}" alt="testi 1" class="mb-4 mt-4 rounded-circle" />
                                 <h3 class="mb-3">Angga risky</h3>
                                 <p class="testimonial">
                                     “ It was glorious and I could not stop to say wohooo for
@@ -159,7 +159,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
                             <div class="testimonial-content">
-                                <img src="frontend/images/testi-2.png" alt="testi 2" class="mb-4 mt-4 rounded-circle" />
+                                <img src="{{ url('frontend/images/testi-2.png') }}" alt="testi 2" class="mb-4 mt-4 rounded-circle" />
                                 <h3 class="mb-3">Shayna</h3>
                                 <p class="testimonial">
                                     “ The trip was amazing and I saw something beautiful in that
@@ -173,7 +173,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
                             <div class="testimonial-content">
-                                <img src="frontend/images/testi-3.png" alt="testi 3" class="mb-4 mt-4 rounded-circle" />
+                                <img src="{{ url('frontend/images/testi-3.png') }}" alt="testi 3" class="mb-4 mt-4 rounded-circle" />
                                 <h3 class="mb-3">Shabrina</h3>
                                 <p class="testimonial">
                                     “ I loved it when the waves was shaking harder — I was

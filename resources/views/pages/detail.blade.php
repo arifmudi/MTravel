@@ -31,25 +31,25 @@
               <p>Republic of Indonesia Raya</p>
               <div class="galery">
                 <div class="xzoom-container">
-                  <img src="frontend/images/Mask Group 4.png" alt="details" class="xzoom" id="xzoom-default"
-                    xoriginal="frontend/images/Mask Group 4.png" />
+                  <img src="{{ url('frontend/images/Mask Group 4.png') }}" alt="details" class="xzoom" id="xzoom-default"
+                    xoriginal="{{ url('frontend/images/Mask Group 4.png') }}" />
                 </div>
                 <div class="xzoom-thumbs">
-                  <a href="frontend/images/Mask Group 4.png">
-                    <img src="frontend/images/Mask Group 4.png" alt="image 1" class="xzoom-gallery" width="120px"
-                      xpreview="frontend/images/Mask Group 4.png" /></a>
-                  <a href="frontend/images/Mask Group 4.png">
-                    <img src="frontend/images/Mask Group 4.png" alt="image 1" class="xzoom-gallery" width="120px"
-                      xpreview="frontend/images/Mask Group 4.png" /></a>
-                  <a href="frontend/images/Mask Group 4.png">
-                    <img src="frontend/images/Mask Group 4.png" alt="image 1" class="xzoom-gallery" width="120px"
-                      xpreview="frontend/images/Mask Group 4.png" /></a>
-                  <a href="frontend/images/Mask Group 4.png">
-                    <img src="frontend/images/Mask Group 4.png" alt="image 1" class="xzoom-gallery" width="120px"
-                      xpreview="frontend/images/Mask Group 4.png" /></a>
-                  <a href="frontend/images/Mask Group 5-3.png">
-                    <img src="frontend/images/Mask Group 5-3.png" alt="image 1" class="xzoom-gallery" width="120px"
-                      xpreview="frontend/images/Mask Group 5-3.png" /></a>
+                  <a href="{{ url('frontend/images/Mask Group 4.png') }}">
+                    <img src="{{ url('frontend/images/Mask Group 4.png') }}" alt="image 1" class="xzoom-gallery" width="120px"
+                      xpreview="{{ url('frontend/images/Mask Group 4.png') }}" /></a>
+                  <a href="{{ url('frontend/images/Mask Group 4.png') }}">
+                    <img src="{{ url('frontend/images/Mask Group 4.png') }}" alt="image 1" class="xzoom-gallery" width="120px"
+                      xpreview="{{ url('frontend/images/Mask Group 4.png') }}" /></a>
+                  <a href="{{ url('frontend/images/Mask Group 4.png') }}">
+                    <img src="{{ url('frontend/images/Mask Group 4.png') }}" alt="image 1" class="xzoom-gallery" width="120px"
+                      xpreview="{{ url('frontend/images/Mask Group 4.png') }}" /></a>
+                  <a href="{{ url('frontend/images/Mask Group 4.png') }}">
+                    <img src="{{ url('frontend/images/Mask Group 4.png') }}" alt="image 1" class="xzoom-gallery" width="120px"
+                      xpreview="{{ url('frontend/images/Mask Group 4.png') }}" /></a>
+                  <a href="{{ url('frontend/images/Mask Group 5-3.png') }}">
+                    <img src="{{ url('frontend/images/Mask Group 5-3.png') }}" alt="image 1" class="xzoom-gallery" width="120px"
+                      xpreview="{{ url('frontend/images/Mask Group 5-3.png') }}" /></a>
                 </div>
               </div>
               <h2>Tentang Wisata</h2>
@@ -69,7 +69,7 @@
               <div class="features row">
                 <div class="col-md-4">
                   <div class="description">
-                    <img src="frontend/images/tiket.png" alt="Tiket" class="features-image" />
+                    <img src="{{ url('frontend/images/tiket.png') }}" alt="Tiket" class="features-image" />
                     <div class="description">
                       <h3>Featured Event</h3>
                       <p>Tari Kecak</p>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-md-4 border-left">
                   <div class="description">
-                    <img src="frontend/images/ic_language.png" alt="Bahasa" class="features-image" />
+                    <img src="{{ url('frontend/images/ic_language.png') }}" alt="Bahasa" class="features-image" />
                     <div class="description">
                       <h3>Language</h3>
                       <p>Bahasa Indonesia</p>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-md-4 border-left">
                   <div class="description">
-                    <img src="frontend/images/ic_foods.png" alt="Makanan" class="features-image" />
+                    <img src="{{ url('frontend/images/ic_foods.png') }}" alt="Makanan" class="features-image" />
                     <div class="description">
                       <h3>Foods</h3>
                       <p>Local Foods</p>
@@ -101,10 +101,10 @@
             <div class="card card-details card-right">
               <h2>Members are going</h2>
               <div class="members my-2">
-                <img src="frontend/images/Mask Group 3.png" alt="member" class="member-image mr-1" />
-                <img src="frontend/images/Mask Group 3.png" alt="member" class="member-image mr-1" />
-                <img src="frontend/images/Mask Group 3.png" alt="member" class="member-image mr-1" />
-                <img src="frontend/images/Mask Group 3.png" alt="member" class="member-image mr-1" />
+                <img src="{{ url('frontend/images/Mask Group 3.png') }}" alt="member" class="member-image mr-1" />
+                <img src="{{ url('frontend/images/Mask Group 3.png') }}" alt="member" class="member-image mr-1" />
+                <img src="{{ url('frontend/images/Mask Group 3.png') }}" alt="member" class="member-image mr-1" />
+                <img src="{{ url('frontend/images/Mask Group 3.png') }}" alt="member" class="member-image mr-1" />
               </div>
               <hr />
               <h2>Trip Informations</h2>
@@ -128,7 +128,7 @@
               </table>
             </div>
             <div class="join-container">
-              <a href="checkout.html" class="btn btn-block btn-join-now mt-3 py-2">Join Now</a>
+              <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now mt-3 py-2">Join Now</a>
             </div>
           </div>
         </div>
