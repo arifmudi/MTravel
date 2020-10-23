@@ -25,8 +25,11 @@ Route::get('/sukses', 'SuksesController@index')
 
 Route::prefix('admin')
     ->namespace('Admin')
+    ->middleware(['auth', 'admin'])
     ->group(function () {
         Route::get('/', 'DashboardController@index')
             ->name('admin.dashboard');
     });
 
+
+Auth::routes();
