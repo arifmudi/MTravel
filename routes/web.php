@@ -29,7 +29,8 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', 'DashboardController@index')
             ->name('admin.dashboard');
+        Route::resource('paket-travel', 'TravelPackageController');
     });
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);

@@ -30,17 +30,52 @@
                 </li>
             </ul>
 
-            <!-- Mobile Button -->
+            @guest
+                <!-- Mobile Button -->
             <form class="form-inline d-sm-block d-md-none">
-                <button class="btn btn-login my-2 my-sm-0">Masuk</button>
+                <button class="btn btn-login my-2 my-sm-0" type="button" onclick="event.preventDefault(); location.href='{{ route('login') }}';">Masuk</button>
             </form>
 
             <!-- Dekstop Button -->
             <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                <button class="btn btn-login btn-navbar btn-navbar-right my-2 my-sm-0 px-4">
+                <button class="btn btn-login btn-navbar btn-navbar-right my-2 my-sm-0 px-4" type="button" onclick="event.preventDefault(); location.href='{{ route('login') }}';">
                     Masuk
                 </button>
-            </form>
+            </form>   
+            @endguest
+
+            @auth
+            @if (Auth::user()->roles == 'ADMIN')
+                <!-- Mobile Button -->
+                <form class="form-inline d-sm-block d-md-none" action="{{ route('admin.dashboard') }}" method="HEAD">
+                    {{-- @csrf --}}
+                    <button class="btn btn-login my-2 my-sm-0" type="submit">dashboard</button>
+                </form>
+
+                <!-- Dekstop Button -->
+                <form class="form-inline my-2 my-lg-0 d-none d-md-block" action="{{ route('admin.dashboard') }}" method="HEAD">
+                    {{-- @csrf --}}
+                    <button class="btn btn-login btn-navbar btn-navbar-right my-2 my-sm-0 px-4" type="submit">
+                        dashboard
+                    </button>
+                </form>
+            @else
+                <!-- Mobile Button -->
+                <form class="form-inline d-sm-block d-md-none" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="btn btn-login my-2 my-sm-0" type="submit">Keluar</button>
+                </form>
+
+                <!-- Dekstop Button -->
+                <form class="form-inline my-2 my-lg-0 d-none d-md-block" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="btn btn-login btn-navbar btn-navbar-right my-2 my-sm-0 px-4" type="submit">
+                        Keluar
+                    </button>
+                </form>
+            @endif
+                
+            @endauth
         </div>
     </nav>
 </div>
