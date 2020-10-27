@@ -30,6 +30,7 @@ Route::prefix('admin')
         Route::get('/', 'DashboardController@index')
             ->name('admin.dashboard');
         Route::resource('paket-travel', 'TravelPackageController');
+        Route::resource('gallery', 'GalleryController');
     });
 
 

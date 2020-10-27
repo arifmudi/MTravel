@@ -6,9 +6,9 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Paket Travel</h1>
-            <a href="{{ route('paket-travel.create') }}" class="btn btn-sm btn-primary shadow-sm">
-                <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Paket Travel
+            <h1 class="h3 mb-0 text-gray-800">Gallery</h1>
+            <a href="{{ route('gallery.create') }}" class="btn btn-sm btn-primary shadow-sm">
+                <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Gallery
             </a>
 
         </div>
@@ -21,11 +21,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Title</th>
-                                    <th>Location</th>
-                                    <th>Type</th>
-                                    <th>Departure date</th>
-                                    <th>Type</th>
+                                    <th>Travel</th>
+                                    <th>Gambar</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -36,16 +33,15 @@
                                @forelse ($items as $item)
                                 <tr>
                                     <td>{{ $no }}</td>
-                                    <td>{{ $item->title }}</td>
-                                    <td>{{ $item->location }}</td>
-                                    <td>{{ $item->type }}</td>
-                                    <td>{{ $item->depature_date }}</td>
-                                    <td>{{ $item->type }}</td>
+                                    <td>{{ $item->travel_package->title }}</td>
                                     <td>
-                                        <a href="{{ route('paket-travel.edit', $item->id) }}" class="btn btn-info">
+                                        <img src="{{ Storage::url($item->image) }}" alt="{{ $item->travel_package->title }}" style="width: 150px;" class="img-thumbnail">
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('gallery.edit', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('paket-travel.destroy', $item->id) }}" method="POST" class="d-inline">
+                                        <form action="{{ route('gallery.destroy', $item->id) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger">
