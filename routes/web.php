@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index')
         ->name('home');
 
-Route::get('/details', 'DetailController@index')
+Route::get('/detail/{slug}', 'DetailController@index')
         ->name('detail');
         
 Route::get('/checkout', 'CheckoutController@index')
@@ -31,6 +31,7 @@ Route::prefix('admin')
             ->name('admin.dashboard');
         Route::resource('paket-travel', 'TravelPackageController');
         Route::resource('gallery', 'GalleryController');
+        Route::resource('transaction', 'TransactionController');
     });
 
 
